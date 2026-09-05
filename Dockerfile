@@ -4,9 +4,12 @@ WORKDIR /var/www/html
 
 RUN apk add --no-cache libpq \
     && apk add --no-cache --virtual .build-deps \
-    $PHPIZE_DEPS \
-    postgresql-dev \
-    && docker-php-ext-install pdo_pgsql \
+        $PHPIZE_DEPS \
+        postgresql-dev \
+    && docker-php-ext-install \
+        pdo_pgsql \
+        pcntl \
+        posix \
     && pecl install redis \
     && docker-php-ext-enable redis \
     && apk del .build-deps

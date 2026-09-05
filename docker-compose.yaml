@@ -11,6 +11,38 @@ services:
     ports:
       - "8080:80"
 
+  horizon:
+    build: .
+    command: ["php", "artisan", "horizon"]
+    user: "${APP_UID:-1000}:${APP_GID:-1000}"
+    depends_on:
+      redis:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+    env_file:
+      - .env
+    volumes:
+      - .:/var/www/html
+    networks:
+      - bdc_network
+
+  scheduler:
+    build:  .
+    command:  ["php", "artisan", "schedule:work"]
+    user: "${APP_UID:-1000}:${APP_GID:-1000}"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    env_file:
+      - .env
+    volumes:
+      - .:/var/www/html
+    networks:
+      - bdc_network
+
   app:
     build:
       context: .
@@ -24,7 +56,8 @@ services:
         condition: service_healthy
     networks:
       - bdc_network
-    env_file: .env
+    env_file:
+      - .env
     volumes:
       - .:/var/www/html
 
