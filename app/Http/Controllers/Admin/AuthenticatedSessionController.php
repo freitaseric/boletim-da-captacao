@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
-use Illuminate\Contracts\View\View;
 
 class AuthenticatedSessionController
 {
@@ -19,7 +19,7 @@ class AuthenticatedSessionController
     {
         $credentials = $request->validate([
             'email' => ['required', 'email'],
-            'password'  => ['required', 'string'],
+            'password' => ['required', 'string'],
         ]);
         $credentials['email'] = strtolower(trim($credentials['email']));
 
