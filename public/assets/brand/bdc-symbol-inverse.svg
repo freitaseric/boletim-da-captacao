@@ -1,0 +1,16 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Symbol">
+<circle id="Radar Ring / Outer" cx="22" cy="22" r="15.62" stroke="white" stroke-width="2.2"/>
+<circle id="Radar Ring / Middle" cx="22" cy="22" r="10.615" stroke="white" stroke-width="1.65"/>
+<circle id="Radar Ring / Inner" cx="22" cy="22" r="5.335" stroke="white" stroke-width="1.65"/>
+<line id="Radar arm" x1="22.7778" y1="21.2222" x2="31.4894" y2="29.9337" stroke="#C89D4C" stroke-width="2.2"/>
+<circle id="Radar dot" cx="22" cy="22" r="2.64" fill="#C89D4C"/>
+<g id="Document">
+<rect x="24.64" y="22.88" width="13.2" height="15.84" rx="1.12" fill="white"/>
+<rect x="24.64" y="22.88" width="13.2" height="15.84" rx="1.12" stroke="#0D3B36" stroke-width="1.76"/>
+<line id="Document Line / 1" x1="27.28" y1="26.675" x2="35.2" y2="26.675" stroke="#0D3B36" stroke-width="1.21"/>
+<line id="Document Line / 2" x1="27.28" y1="30.635" x2="35.2" y2="30.635" stroke="#0D3B36" stroke-width="1.21"/>
+<line id="Document Line / 3" x1="27.28" y1="34.595" x2="35.2" y2="34.595" stroke="#0D3B36" stroke-width="1.21"/>
+</g>
+</g>
+</svg>
